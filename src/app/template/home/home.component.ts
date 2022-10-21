@@ -9,9 +9,11 @@ export class HomeComponent implements OnInit {
   
   nomeProduto: string = 'Curso de Angular';
   anuncio: string = `O ${this.nomeProduto} está em promoção`;
-  idProduto: number = 123;
-  precoProduto: number = 2.59;
-  promocao: boolean = true;
+  idProduto: number = 3;
+  precoProduto: number = 2.51;
+  promocao: boolean = false;
+  foto:string = 'assets/img/crud.png'
+  dataValidade = '2021-12-31'
 
   constructor() { 
     //this.anuncio = `O ` + this.nomeProduto + `está em promoção`;
@@ -20,18 +22,18 @@ export class HomeComponent implements OnInit {
     console.log('Id: ', this.idProduto);
     console.log('Preço: ', this.precoProduto);
     console.log('Promoção: ', this.promocao);
-    var variavel1;
-    let variavel2;
+    //var variavel1;
+    //let variavel2;
     /*const variavel3 : number = 10;*/
     /*var idade = 15;
     console.log ('Minha idade é: ', idade);*/
     /*let idadeLet = 20;
     console.log ('Sua idade é: ', idadeLet);*/
 
-    function imprimeIdade() {
+    /*function imprimeIdade() {
       var idade = 40;
       console.log('Minha idade é: ', idade);
-    }
+    }*/
 
     /*function imprimeIdade() {
       let idade = 30;
@@ -50,7 +52,7 @@ export class HomeComponent implements OnInit {
       }
       console.log('Idade fora do for: ', idade);
     }*/
-    imprimeIdade();
+    //imprimeIdade();
     //imprimeIdadeFor();
 
     //EXERCÍCIOS DE VARIÁVEIS
@@ -123,9 +125,10 @@ export class HomeComponent implements OnInit {
     }
     console.log('Variável a fora do if: ', a);
     console.log('Variável b fora do if: ', b);*/
+
+    
   }    
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
