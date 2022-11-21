@@ -15,6 +15,8 @@ import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from "./shared/shared.module";
+
 
 
 registerLocaleData(localePt);
@@ -22,22 +24,21 @@ registerLocaleData(localePt);
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    ListarProdutosComponent,
-    CadastrarProdutoComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-
-  
-  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        ListarProdutosComponent,
+        CadastrarProdutoComponent
+    ],
+    providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        SharedModule,
+    ],
 })
 export class AppModule { }
