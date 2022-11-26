@@ -16,12 +16,11 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from "./shared/shared.module";
+import {HttpClientModule} from '@angular/common/http';
 
 
 
 registerLocaleData(localePt);
-
-
 
 @NgModule({
     declarations: [
@@ -39,6 +38,7 @@ registerLocaleData(localePt);
         AppRoutingModule,
         FormsModule,
         SharedModule,
+        HttpClientModule
     ],
 })
 export class AppModule { }
