@@ -34,4 +34,12 @@ export class ListarProdutosComponent implements OnInit {
     })
   }
 
+  deletar(produto: IProduto): void {
+    this.produtosService.excluir(produto.id!).subscribe(() =>{ 
+      this.produtosService.exibirMensagem('SISTEMA',`${produto.nome} Foi excluido com sucesso!`, 'toast-error');
+      this.carregarProdutos();
+    });
+    
+  }
+
 }
